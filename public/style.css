@@ -40,12 +40,12 @@ blockquote p {
 }
 
 * {
-  cursor: url("../../images/ink-cursor-11.svg"), auto;
+  cursor: url("/images/ink-cursor-11.svg"), auto;
 }
 
 a,
 .page-footer ul li a {
-  cursor: url("../../images/ink-cursor-12.svg"), auto;
+  cursor: url("/images/ink-cursor-12.svg"), auto;
 }
 
 .link-github,
@@ -54,7 +54,7 @@ nav li a,
 .profile a:last-of-type,
 .link-allstyles,
 .page-footer p a {
-  cursor: url("../../images/ink-cursor-13.svg"), auto;
+  cursor: url("/images/ink-cursor-13.svg"), auto;
 }
 
 header {
@@ -63,7 +63,7 @@ header {
 
 header div h1::before {
   position: absolute;
-  content: url(../../images/flower-01.svg);
+  content: url(/images/flower-01.svg);
   width: 30rem;
   height: auto;
   top: 0;
@@ -73,7 +73,7 @@ header div h1::before {
 
 header div h1::after {
   position: absolute;
-  content: url(../../images/flower-02.svg);
+  content: url(/images/flower-02.svg);
   width: 30rem;
   height: auto;
   top: -10rem;
@@ -83,7 +83,7 @@ header div h1::after {
 
 header div h2::before {
   position: absolute;
-  content: url(../../images/flower-03.svg);
+  content: url(/images/flower-03.svg);
   width: 30rem;
   height: auto;
   top: 3rem;
@@ -93,7 +93,7 @@ header div h2::before {
 
 header div h2::after {
   position: absolute;
-  content: url(../../images/flower-04.svg);
+  content: url(/images/flower-04.svg);
   width: 30rem;
   height: auto;
   top: -3rem;
@@ -103,7 +103,7 @@ header div h2::after {
 
 header div p::before {
   position: absolute;
-  content: url(../../images/flower-01.svg);
+  content: url(/images/flower-01.svg);
   width: 30rem;
   height: auto;
   top: 14rem;
@@ -113,7 +113,7 @@ header div p::before {
 
 header div p::after {
   position: absolute;
-  content: url(../../images/flower-01.svg);
+  content: url(/images/flower-01.svg);
   width: 30rem;
   height: auto;
   top: -10rem;
@@ -223,7 +223,7 @@ header::after {
   right: -2rem;
   width: 60rem;
   height: 50rem;
-  background-image: url("../images/ink-sketches-02.svg");
+  background-image: url("/images/ink-sketches-02.svg");
   background-size: auto 100%;
   /* Maintain aspect ratio with full height */
   background-position: right calc(100% - 100%) top;
@@ -250,7 +250,7 @@ header::after {
     bottom: 0;
     width: 60rem;
     height: 50rem;
-    background-image: url("../images/ink-sketches-02.svg");
+    background-image: url("/images/ink-sketches-02.svg");
     background-size: auto 100%;
     background-position: center bottom;
     /* Pin background image to bottom-left */
@@ -275,7 +275,7 @@ header a {
 header .link-github {
   color: #ffffff;
   padding: 3rem;
-  background-image: url(../../images/ink-sketches-08.svg);
+  background-image: url(/images/ink-sketches-08.svg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -307,7 +307,7 @@ header .link-github svg path {
   }
   header::after {
     content: "";
-    background-image: url("../images/ink-sketches-02.svg");
+    background-image: url("/images/ink-sketches-02.svg");
     background-size: cover;
     z-index: -1;
   }
@@ -371,7 +371,7 @@ nav a {
   }
   nav::after {
     content: "";
-    background-image: url("../images/ink-sketches-02.svg");
+    background-image: url("/images/ink-sketches-02.svg");
     background-size: cover;
     z-index: -1;
   }
@@ -441,7 +441,7 @@ nav a {
   padding: 10rem 10rem;
   color: #ffffff;
   list-style: none;
-  background-image: url(./images/ink-sketches-10.svg);
+  background-image: url(/images/ink-sketches-10.svg);
   background-size: cover;
   background-position: center;
   z-index: -1;
@@ -456,7 +456,7 @@ nav a {
   left: 0;
   width: 50rem;
   height: 40rem;
-  background-image: url("../images/ink-sketches-01.svg");
+  background-image: url("/images/ink-sketches-01.svg");
   background-size: cover;
   background-position: left;
   z-index: -1;
@@ -468,7 +468,7 @@ nav a {
   right: -10rem;
   width: 50rem;
   height: 40rem;
-  background-image: url("../images/ink-sketches-03.svg");
+  background-image: url("/images/ink-sketches-03.svg");
   background-size: cover;
   background-position: right;
   z-index: -1;
@@ -527,7 +527,7 @@ nav a {
   }
   #about *::after {
     content: "";
-    background-image: url("../images/ink-sketches-02.svg");
+    background-image: url("/images/ink-sketches-02.svg");
     background-size: cover;
     z-index: -1;
   }
@@ -589,7 +589,7 @@ nav a {
   border: none;
   color: #ffffff;
   padding: 6rem 5rem 4rem 5rem;
-  background-image: url(../../images/ink-sketches-07.svg);
+  background-image: url(/images/ink-sketches-07.svg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -622,7 +622,7 @@ nav a {
   }
   #guidelines *::after {
     content: "";
-    background-image: url("../images/ink-sketches-02.svg");
+    background-image: url("/images/ink-sketches-02.svg");
     background-size: cover;
     z-index: -1;
   }
@@ -685,7 +685,7 @@ nav a {
   left: -7rem;
   width: 30rem;
   height: 30rem;
-  background-image: url("../images/ink-sketches-03.svg");
+  background-image: url("/images/ink-sketches-03.svg");
   background-size: cover;
   background-position: left;
   z-index: -1;
@@ -695,7 +695,7 @@ nav a {
   border: none;
   color: #ffffff;
   padding: 4rem;
-  background-image: url(../../images/ink-sketches-10.svg);
+  background-image: url(/images/ink-sketches-10.svg);
   background-size: cover;
   background-position: center;
 }
@@ -749,7 +749,7 @@ nav a {
   }
   #contribute::after {
     content: "";
-    background-image: url("../images/ink-sketches-02.svg");
+    background-image: url("/images/ink-sketches-02.svg");
     background-size: cover;
     z-index: -1;
   }
@@ -833,7 +833,7 @@ nav a {
   color: #ffffff;
   padding: 5rem 3rem 1rem 3rem;
   margin: 0 auto;
-  background-image: url(../../images/ink-sketches-08.svg);
+  background-image: url(/images/ink-sketches-08.svg);
   display: block;
   background-size: cover;
   background-position: center;
@@ -875,7 +875,7 @@ nav a {
   border: none;
   color: #ffffff;
   padding: 5rem 2rem 1rem 2rem;
-  background-image: url(../../images/ink-sketches-08.svg);
+  background-image: url(/images/ink-sketches-08.svg);
   display: block;
   background-size: cover;
   background-position: center;
@@ -897,7 +897,7 @@ nav a {
   right: 0rem;
   width: 60rem;
   height: 50rem;
-  background-image: url("../images/ink-sketches-05.svg");
+  background-image: url("/images/ink-sketches-05.svg");
   background-size: cover;
   background-position: right;
   z-index: -1;
@@ -946,7 +946,7 @@ nav a {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  background-image: url(../../images/ink-sketches-06.svg);
+  background-image: url(/images/ink-sketches-06.svg);
   background-size: cover;
   background-position: top;
   z-index: -1;
@@ -1001,7 +1001,7 @@ nav a {
   }
   .page-footer::after {
     content: "";
-    background-image: url("../images/ink-sketches-02.svg");
+    background-image: url("/images/ink-sketches-02.svg");
     background-size: cover;
     z-index: -1;
   }
