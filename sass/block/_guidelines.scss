@@ -1,0 +1,61 @@
+#guidelines {
+   
+   .container {
+      margin-top: 6rem;
+   }
+
+   & a {
+      justify-self: center;
+      @include paragraph-font(25px);
+      border-bottom: solid 4px $color-primary-alt;
+      color: $color-primary;
+      text-decoration: none;
+      margin: auto -1px; //removed the extra gap between the p and a text
+      text-align: center;   
+   }
+
+   h3 {
+      margin-top: 4rem;
+   }
+
+   .link-guidelines {
+      border: none;
+      color: $color-secondary;
+      padding: 6rem 5rem 4rem 5rem;
+      background-image: url(../../images/ink-sketches-07.svg);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      display: block;
+      margin-top: 2rem;
+      width: 25rem;
+      height: 6rem;
+      z-index: -1;
+      transition: background-size 0.3s ease-in-out;
+   }
+
+   * {
+      @include small-screen;
+     
+   }
+
+
+   @media (max-width: 550px) {
+      * {
+         font-size: 125%;
+      }
+
+
+      margin-top: 670px;
+
+
+      a {
+         margin: auto -1px; //removed the extra gap between the p and a text
+      }
+
+
+      a:after {
+         max-width: 100%;
+      }
+   }
+}

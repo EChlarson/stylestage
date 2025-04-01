@@ -1,0 +1,89 @@
+.profile {
+   position: relative;
+   margin-top: 6rem;
+
+   ul {
+      list-style: none;
+      padding: 0;
+   }
+
+   a {
+      text-decoration: none;
+      color: $color-primary;
+      border-bottom: solid 4px $color-primary-alt;
+      margin: auto -1px; //removed the extra gap between the p and a text
+
+   }
+
+   .container > a {
+      display: block;
+      margin: 0 auto;
+      margin-top: 240px;
+      text-align: center;
+      border: none;
+      color: $color-secondary;
+      padding: 5rem 2rem 1rem 2rem;
+      background-image: url(../../images/ink-sketches-08.svg);
+      display: block;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 25rem;
+      height: 6rem;
+      z-index: -1;
+      transition: background-size 0.3s ease-in-out;
+
+      @media (max-width: 1050px) {
+         margin-top: 125px;
+      }
+
+   }//CENTER BUTTON TEXT BETTER
+
+   //background image 
+   &::after {
+      content: "";
+      position: absolute;
+      top: -10rem;
+      right: 0rem;
+      width: 60rem;
+      height: 50rem;
+      background-image: url("../images/ink-sketches-05.svg");
+      background-size: cover;
+      background-position: right;
+      z-index: -1;
+
+      @media (max-width:1310px) {
+         width: 48rem;
+         height: 40rem;
+      }
+
+      @media (max-width: 1050px) {
+         width: 36rem;
+         height: 30rem;
+         top: -8rem;         
+      }
+
+      @media (max-width: 890px) {
+         width: 30rem;
+         height: 25rem;
+         top: -5rem;
+         right: -4rem;         
+      }
+
+      @media (max-width: 690px) {
+         width: 21rem;
+         height: 18.5rem;
+         top: -4rem;
+         right: -5rem;
+      }
+      
+   }
+
+   @media (max-width: 550px) {
+      .container > a {
+         margin: 2px;
+         padding-bottom: 24px;
+         padding-left: 24px;
+      }
+   }
+}

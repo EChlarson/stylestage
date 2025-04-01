@@ -1,0 +1,44 @@
+//New Fonts Added
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Yeon+Sung&display=swap');
+
+//Mixin for each font family imported from Google Fonts
+//Call with font size variable
+@mixin heading-font($size) {
+   font-family: "Yeon Sung", serif;
+   font-weight: 400;
+   font-style: normal;
+   font-size: $size;
+}
+
+@mixin paragraph-font($size) {
+   font-family: "Quicksand", serif;
+   font-optical-sizing: auto;
+   font-style: normal;
+   font-size: $size;
+}
+
+//Base Font Stylings
+h1 {
+   @include heading-font(160px);
+   margin: 1rem;
+}
+
+h2 {
+   @include heading-font(50px);
+   margin: 1rem;
+}
+
+h3, h4 {
+   @include heading-font(35px);
+   margin: 1rem;
+}
+
+p, li, a{
+   @include paragraph-font(25px);
+   margin: 1rem;
+}
+
+blockquote p {
+   @include heading-font(25px);
+   margin: 1rem;
+}

@@ -1,0 +1,43 @@
+nav {
+   margin: 8rem 0 3rem 0;
+   padding: 8rem 8rem;
+
+   background-image: url(/images/ink-sketches-09.svg);
+   background-size: cover;
+   background-position: center;
+   z-index: 10000;
+
+   & ul {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   list-style: none;
+   padding-left: 0px;
+   }
+
+   li {
+      margin: .5rem;
+   }
+
+   a {
+      color: $color-secondary;
+      text-decoration: none;
+   }
+
+   @include small-screen;
+
+
+   @media (max-width: 1000px) {
+      
+      ul {
+         margin-top: 0px;
+         margin-bottom: 32px;
+         padding-left: 0px;
+         padding-bottom: 40px;
+         display: block;
+         text-align: center;
+      }
+   }
+}
+
+//ADD ANIMATION AND HOVER EFFECTS!F

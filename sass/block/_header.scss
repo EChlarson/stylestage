@@ -1,0 +1,92 @@
+header {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   color: $color-primary;
+   position: relative; /* Ensure positioning context for ::after */
+
+   &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: -2rem;
+      width: 60rem;
+      height: 50rem;
+      background-image: url("../images/ink-sketches-02.svg");
+      background-size: auto 100%; /* Maintain aspect ratio with full height */
+      background-position: right calc(100% - 100%) top; /*Pin background image to top-right*/
+      background-repeat: no-repeat;
+      z-index: -1;
+   }
+
+   @media (max-width: 1250px) {
+      display: block;
+      text-align: center;
+      position: relative;
+      min-height: 1300px; /* Ensure enough space for the image */
+      margin-bottom: -220px;
+  
+      &::after {
+         content: "";
+         position: absolute;
+         top: auto;
+         left: 48%; /* Horizontally center the background image */
+         transform: translateX(-50%);
+         bottom: 0;
+         width: 60rem;
+         height: 50rem;
+         background-image: url("../images/ink-sketches-02.svg");
+         background-size: auto 100%; 
+         background-position: center bottom; /* Pin background image to bottom-left */
+         background-repeat: no-repeat;
+         z-index: -1;
+
+         @media (max-width: 870px) {
+            width: 40rem;
+            height: 35rem;
+         }
+      }
+   }
+
+   svg {
+      width: 2rem;
+      margin-top: 3rem;
+   }
+
+   a {
+      color: $color-primary;
+      text-decoration: none;
+   }
+
+   .link-github {
+      color: $color-secondary;
+      padding: 3rem;
+      background-image: url(../../images/ink-sketches-08.svg);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      z-index: -1;
+      transition: background-size 0.3s ease-in-out;
+   }
+
+   .link-github svg path {
+      fill: $color-secondary;
+   }
+
+   @include small-screen;
+
+   @media (max-width: 550px) {
+      h1 {
+         margin: 20px;
+      }
+
+      min-height: 1400px;
+   }
+}
+
+.skip-link {
+   margin: 1rem 1rem;
+   color: $color-primary;
+   text-decoration: none;
+}
+
+//MOVE .SKIP-LINK DOWN A BIT

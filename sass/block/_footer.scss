@@ -1,0 +1,73 @@
+.page-footer {
+   padding: 4rem 1rem;
+   text-align: center;
+   height: 48rem;
+
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-end;
+
+   p {
+      color: $color-secondary;
+   }
+
+   ul {
+      list-style: none;
+      margin: 6rem 1rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr ;
+
+      li {
+         background-color: $color-secondary;
+         border-radius: 1rem;
+         box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+
+         a {
+            color: $color-primary;
+            text-decoration: none;
+         } //CENTER BUTTON TEXT VERTICALLY
+      }
+   }
+
+   svg {
+      width: 2rem;
+      margin-top: 3rem;
+   }
+
+   p a {
+      text-decoration: none;
+      color: $color-secondary;
+      border-bottom: solid 4px $color-primary-alt;
+      margin: auto -1px; //removed the extra gap between the p and a text
+
+   }
+
+   //background image
+   background-image: url(../../images/ink-sketches-06.svg);
+   background-size: cover;
+   background-position: top;
+   z-index: -1;
+
+   @include small-screen;
+
+
+   @media (max-width: 550px) {
+      margin-top: 2rem;
+      height: 76rem;
+
+
+      ul {
+         display: block;
+         padding-left: 0px;
+      }
+
+
+      li {
+         height: 7rem;
+         line-height: 7rem;
+         text-align: center;
+      }
+   }
+
+
+} //CAN WE GET THE TOP OF THE BACKGROUND TO SHOW?

@@ -1,0 +1,58 @@
+#styles {
+   margin-top: 6rem;
+
+   h2 {
+      text-align: center;
+   }
+
+   ul {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 30px 20px;
+      list-style: none;
+      padding-left: 0px;
+   }
+
+   li {
+      text-decoration: none;
+      text-align: center;
+      color: $color-secondary;
+      background-color: $color-primary-alt;
+      border-radius: 1rem;
+      padding: 4rem 1rem;
+
+      a{
+         color: $color-secondary;
+         margin: auto -1px; //removed the extra gap between the p and a text
+      }
+   }
+
+   .container > a {
+      text-align: center;
+      border: none;
+      color: $color-secondary;
+      padding: 5rem 3rem 1rem 3rem;
+      margin: 0 auto;
+      background-image: url(../../images/ink-sketches-08.svg);
+      display: block;
+      background-size: cover;
+      background-position: center;
+      width: 25rem;
+      height: 6rem;
+      z-index: -1;
+   }
+
+   @media (max-width: 550px) {
+      ul {
+         display: block;
+         padding-left: 0px;
+      }
+
+
+      .container > a {
+         margin: 2px;
+         padding-bottom: 24px;
+         padding-left: 24px;
+      }
+   }
+}

@@ -1,0 +1,135 @@
+//New Colors Added
+$color-primary: #110F1A;
+$color-primary-alt: #89192F;
+$color-secondary: #ffffff;
+
+$brand-colors: (
+  primary: $color-primary,
+  primary-alt: $color-primary-alt,
+  secondary: $color-secondary,
+);
+
+//Cursor
+* {
+  cursor: url("../../images/ink-cursor-11.svg"), auto;
+}
+
+a,
+.page-footer ul li a {
+  cursor: url("../../images/ink-cursor-12.svg"), auto;
+}
+
+.link-github,
+nav li a,
+.link-guidelines,
+.profile a:last-of-type,
+.link-allstyles,
+.page-footer p a {
+  cursor: url("../../images/ink-cursor-13.svg"), auto;
+}
+
+//Cascading Background
+//Add Z-index
+header {
+  position: relative;
+}
+
+header div h1::before {
+  position: absolute;
+  content: url(../../images/flower-01.svg);
+  width: 30rem;
+  height: auto;
+  top: 0;
+  left: 1rem;
+  animation: fall linear infinite;
+}
+
+header div h1::after {
+  position: absolute;
+  content: url(../../images/flower-02.svg);
+  width: 30rem;
+  height: auto;
+  top: -10rem;
+  left: 15rem;
+  animation: fall linear infinite;
+}
+
+header div h2::before {
+  position: absolute;
+  content: url(../../images/flower-03.svg);
+  width: 30rem;
+  height: auto;
+  top: 3rem;
+  left: 35rem;
+  animation: fall linear infinite;
+}
+
+header div h2::after {
+  position: absolute;
+  content: url(../../images/flower-04.svg);
+  width: 30rem;
+  height: auto;
+  top: -3rem;
+  right: 20rem;
+  animation: fall linear infinite;
+}
+
+header div p::before {
+  position: absolute;
+  content: url(../../images/flower-01.svg);
+  width: 30rem;
+  height: auto;
+  top: 14rem;
+  left: 20rem;
+  animation: fall linear infinite;
+}
+
+header div p::after {
+  position: absolute;
+  content: url(../../images/flower-01.svg);
+  width: 30rem;
+  height: auto;
+  top: -10rem;
+  right: 5rem;
+  animation: fall linear infinite;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg); /* Moves flower to bottom */
+    opacity: 0;
+  }
+}
+
+/* Apply animation settings */
+header div h1::before,
+header div h1::after,
+header div h2::before,
+header div h2::after,
+header div p::before,
+header div p::after {
+  animation: fall 6s linear infinite; /* Duration: 6s, Infinite loop */
+}
+
+/* Add variations so flowers fall at different speeds */
+header div h1::before { animation-duration: 7s; animation-delay: 1s; }
+header div h1::after { animation-duration: 5s; animation-delay: 0.5s; }
+header div h2::before { animation-duration: 6s; animation-delay: 1.5s; }
+header div h2::after { animation-duration: 8s; animation-delay: 2s; }
+header div p::before { animation-duration: 7.5s; animation-delay: 1.2s; }
+header div p::after { animation-duration: 9s; animation-delay: 2.5s; }
+
+//Scroll Bar
+::-webkit-scrollbar-thumb {
+  background: $color-primary-alt;
+  border-radius: 10px;
+  transition: background 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: $color-primary;
+}

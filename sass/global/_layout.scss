@@ -1,0 +1,74 @@
+body {
+   max-width: 1800px;
+   margin: 0px;
+   overflow-x: hidden;
+   
+   //align body to center when screen is larger than 2000px
+   @media (min-width: 1800px) {
+      margin: 0 auto;
+      }
+}
+
+@mixin two-grid-left {
+   display: grid;
+   grid-template-columns: 2fr 1fr;
+}
+
+.link-github:hover::after,
+.link-guidelines:hover::after,
+.profile a:last-of-type:hover::after,
+.link-allstyles:hover::after{
+   transform: translate(-50%, -50%) sale(1.1);
+}
+
+@mixin one-grid-left {
+   display: grid;
+   grid-template-columns: 1fr;
+}
+
+
+@mixin small-screen {
+   @media (max-width: 550px) {
+      * {
+         max-width: 100%;
+         
+      }
+      display: block;
+
+      text-align: center;
+      font-size: normal;
+
+      h1 {
+         font-size: 9rem;
+         margin-top: 6rem;
+         margin-bottom: 18rem;
+      }
+
+
+      h2 {
+         font-size: 3rem;
+      }
+
+
+      p, a {
+         font-size: 1.8rem;
+      }
+
+
+      &::after {
+         content: "";
+         background-image: url("../images/ink-sketches-02.svg");
+         background-size: cover;
+         z-index: -1;
+      }
+   }
+}
+
+
+@media (max-width: 550px) {
+   body {
+      margin-left: 0px;
+      margin-right: 0px;
+      max-width: 100%;
+   }
+}
