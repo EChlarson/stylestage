@@ -1,1 +1,1023 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Yeon+Sung&display=swap");
+h1 {
+  font-family: "Yeon Sung", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 160px;
+  margin: 1rem;
+}
 
+h2 {
+  font-family: "Yeon Sung", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 50px;
+  margin: 1rem;
+}
+
+h3, h4 {
+  font-family: "Yeon Sung", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 35px;
+  margin: 1rem;
+}
+
+p, li, a {
+  font-family: "Quicksand", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size: 25px;
+  margin: 1rem;
+}
+
+blockquote p {
+  font-family: "Yeon Sung", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 25px;
+  margin: 1rem;
+}
+
+* {
+  cursor: url("../../images/ink-cursor-11.svg"), auto;
+}
+
+a,
+.page-footer ul li a {
+  cursor: url("../../images/ink-cursor-12.svg"), auto;
+}
+
+.link-github,
+nav li a,
+.link-guidelines,
+.profile a:last-of-type,
+.link-allstyles,
+.page-footer p a {
+  cursor: url("../../images/ink-cursor-13.svg"), auto;
+}
+
+header {
+  position: relative;
+}
+
+header div h1::before {
+  position: absolute;
+  content: url(../../images/flower-01.svg);
+  width: 30rem;
+  height: auto;
+  top: 0;
+  left: 1rem;
+  animation: fall linear infinite;
+}
+
+header div h1::after {
+  position: absolute;
+  content: url(../../images/flower-02.svg);
+  width: 30rem;
+  height: auto;
+  top: -10rem;
+  left: 15rem;
+  animation: fall linear infinite;
+}
+
+header div h2::before {
+  position: absolute;
+  content: url(../../images/flower-03.svg);
+  width: 30rem;
+  height: auto;
+  top: 3rem;
+  left: 35rem;
+  animation: fall linear infinite;
+}
+
+header div h2::after {
+  position: absolute;
+  content: url(../../images/flower-04.svg);
+  width: 30rem;
+  height: auto;
+  top: -3rem;
+  right: 20rem;
+  animation: fall linear infinite;
+}
+
+header div p::before {
+  position: absolute;
+  content: url(../../images/flower-01.svg);
+  width: 30rem;
+  height: auto;
+  top: 14rem;
+  left: 20rem;
+  animation: fall linear infinite;
+}
+
+header div p::after {
+  position: absolute;
+  content: url(../../images/flower-01.svg);
+  width: 30rem;
+  height: auto;
+  top: -10rem;
+  right: 5rem;
+  animation: fall linear infinite;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+    /* Moves flower to bottom */
+    opacity: 0;
+  }
+}
+/* Apply animation settings */
+header div h1::before,
+header div h1::after,
+header div h2::before,
+header div h2::after,
+header div p::before,
+header div p::after {
+  animation: fall 6s linear infinite;
+  /* Duration: 6s, Infinite loop */
+}
+
+/* Add variations so flowers fall at different speeds */
+header div h1::before {
+  animation-duration: 7s;
+  animation-delay: 1s;
+}
+
+header div h1::after {
+  animation-duration: 5s;
+  animation-delay: 0.5s;
+}
+
+header div h2::before {
+  animation-duration: 6s;
+  animation-delay: 1.5s;
+}
+
+header div h2::after {
+  animation-duration: 8s;
+  animation-delay: 2s;
+}
+
+header div p::before {
+  animation-duration: 7.5s;
+  animation-delay: 1.2s;
+}
+
+header div p::after {
+  animation-duration: 9s;
+  animation-delay: 2.5s;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #89192F;
+  border-radius: 10px;
+  transition: background 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #110F1A;
+}
+
+body {
+  max-width: 1800px;
+  margin: 0px;
+  overflow-x: hidden;
+}
+@media (min-width: 1800px) {
+  body {
+    margin: 0 auto;
+  }
+}
+
+.link-github:hover::after,
+.link-guidelines:hover::after,
+.profile a:last-of-type:hover::after,
+.link-allstyles:hover::after {
+  transform: translate(-50%, -50%) sale(1.1);
+}
+
+@media (max-width: 550px) {
+  body {
+    margin-left: 0px;
+    margin-right: 0px;
+    max-width: 100%;
+  }
+}
+header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  color: #110F1A;
+  position: relative;
+  /* Ensure positioning context for ::after */
+}
+header::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -2rem;
+  width: 60rem;
+  height: 50rem;
+  background-image: url("../images/ink-sketches-02.svg");
+  background-size: auto 100%;
+  /* Maintain aspect ratio with full height */
+  background-position: right calc(100% - 100%) top;
+  /*Pin background image to top-right*/
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+@media (max-width: 1250px) {
+  header {
+    display: block;
+    text-align: center;
+    position: relative;
+    min-height: 1300px;
+    /* Ensure enough space for the image */
+    margin-bottom: -220px;
+  }
+  header::after {
+    content: "";
+    position: absolute;
+    top: auto;
+    left: 48%;
+    /* Horizontally center the background image */
+    transform: translateX(-50%);
+    bottom: 0;
+    width: 60rem;
+    height: 50rem;
+    background-image: url("../images/ink-sketches-02.svg");
+    background-size: auto 100%;
+    background-position: center bottom;
+    /* Pin background image to bottom-left */
+    background-repeat: no-repeat;
+    z-index: -1;
+  }
+}
+@media (max-width: 1250px) and (max-width: 870px) {
+  header::after {
+    width: 40rem;
+    height: 35rem;
+  }
+}
+header svg {
+  width: 2rem;
+  margin-top: 3rem;
+}
+header a {
+  color: #110F1A;
+  text-decoration: none;
+}
+header .link-github {
+  color: #ffffff;
+  padding: 3rem;
+  background-image: url(../../images/ink-sketches-08.svg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1;
+  transition: background-size 0.3s ease-in-out;
+}
+header .link-github svg path {
+  fill: #ffffff;
+}
+@media (max-width: 550px) {
+  header {
+    display: block;
+    text-align: center;
+    font-size: normal;
+  }
+  header * {
+    max-width: 100%;
+  }
+  header h1 {
+    font-size: 9rem;
+    margin-top: 6rem;
+    margin-bottom: 18rem;
+  }
+  header h2 {
+    font-size: 3rem;
+  }
+  header p, header a {
+    font-size: 1.8rem;
+  }
+  header::after {
+    content: "";
+    background-image: url("../images/ink-sketches-02.svg");
+    background-size: cover;
+    z-index: -1;
+  }
+}
+@media (max-width: 550px) {
+  header {
+    min-height: 1400px;
+  }
+  header h1 {
+    margin: 20px;
+  }
+}
+
+.skip-link {
+  margin: 1rem 1rem;
+  color: #110F1A;
+  text-decoration: none;
+}
+
+nav {
+  margin: 8rem 0 3rem 0;
+  padding: 8rem 8rem;
+  background-image: url(/images/ink-sketches-09.svg);
+  background-size: cover;
+  background-position: center;
+  z-index: 10000;
+}
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  padding-left: 0px;
+}
+nav li {
+  margin: 0.5rem;
+}
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+}
+@media (max-width: 550px) {
+  nav {
+    display: block;
+    text-align: center;
+    font-size: normal;
+  }
+  nav * {
+    max-width: 100%;
+  }
+  nav h1 {
+    font-size: 9rem;
+    margin-top: 6rem;
+    margin-bottom: 18rem;
+  }
+  nav h2 {
+    font-size: 3rem;
+  }
+  nav p, nav a {
+    font-size: 1.8rem;
+  }
+  nav::after {
+    content: "";
+    background-image: url("../images/ink-sketches-02.svg");
+    background-size: cover;
+    z-index: -1;
+  }
+}
+@media (max-width: 1000px) {
+  nav ul {
+    margin-top: 0px;
+    margin-bottom: 32px;
+    padding-left: 0px;
+    padding-bottom: 40px;
+    display: block;
+    text-align: center;
+  }
+}
+
+#about {
+  position: relative;
+}
+#about > :first-child {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto auto auto;
+  gap: 0px 0px;
+  grid-template-areas: ". h2 h2" ". p1 p1" ". p2 p2" "blockquote blockquote blockquote" "p3 p3 .";
+}
+#about h2 {
+  grid-area: h2;
+}
+#about .container p:nth-child(2) {
+  grid-area: p1;
+}
+#about .container p:nth-child(3) {
+  grid-area: p2;
+}
+#about .container p:last-child {
+  grid-area: p3;
+}
+#about .container:first-of-type > p:last-of-type {
+  margin: 115px 0px;
+}
+#about .container {
+  margin-top: 6rem;
+}
+#about a {
+  color: #110F1A;
+  text-decoration: none;
+  margin: auto -1px;
+}
+#about blockquote {
+  color: #89192F;
+  margin: 16rem 4rem 6rem 4rem;
+  grid-area: blockquote;
+}
+#about blockquote a {
+  font-family: "Yeon Sung", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 25px;
+  color: #89192F;
+  border-bottom: solid 4px #89192F;
+}
+#about ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 10rem 10rem;
+  color: #ffffff;
+  list-style: none;
+  background-image: url(./images/ink-sketches-10.svg);
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+#about a {
+  border-bottom: solid 4px #89192F;
+}
+#about h2::before {
+  content: "";
+  position: absolute;
+  top: 7rem;
+  left: 0;
+  width: 50rem;
+  height: 40rem;
+  background-image: url("../images/ink-sketches-01.svg");
+  background-size: cover;
+  background-position: left;
+  z-index: -1;
+}
+#about p:last-child::after {
+  content: "";
+  position: absolute;
+  top: 41rem;
+  right: -10rem;
+  width: 50rem;
+  height: 40rem;
+  background-image: url("../images/ink-sketches-03.svg");
+  background-size: cover;
+  background-position: right;
+  z-index: -1;
+}
+@media (max-width: 1360px) {
+  #about h2::before {
+    top: 12.25%;
+  }
+  #about blockquote {
+    margin-top: 38rem;
+  }
+  #about p:last-child::after {
+    top: 38%;
+    right: -12rem;
+  }
+  #about .container:first-of-type > p:last-of-type {
+    margin: 200px 0px 200px 20px;
+    width: 80%;
+  }
+}
+@media (max-width: 900px) {
+  #about p:last-child::after {
+    top: 36%;
+    right: -13rem;
+  }
+  #about .container:first-of-type > p:last-of-type {
+    margin: 50px 0px 50px 20px;
+    width: 60%;
+  }
+}
+@media (max-width: 625px) {
+  #about p:last-child::after {
+    top: 38%;
+    right: -16rem;
+  }
+}
+@media (max-width: 550px) {
+  #about * {
+    display: block;
+    text-align: center;
+    font-size: normal;
+  }
+  #about * * {
+    max-width: 100%;
+  }
+  #about * h1 {
+    font-size: 9rem;
+    margin-top: 6rem;
+    margin-bottom: 18rem;
+  }
+  #about * h2 {
+    font-size: 3rem;
+  }
+  #about * p, #about * a {
+    font-size: 1.8rem;
+  }
+  #about *::after {
+    content: "";
+    background-image: url("../images/ink-sketches-02.svg");
+    background-size: cover;
+    z-index: -1;
+  }
+}
+@media (max-width: 550px) {
+  #about > :first-child {
+    display: block;
+  }
+  #about h2::before {
+    top: 28rem;
+    max-width: 100%;
+  }
+  #about blockquote {
+    margin-top: 400px;
+  }
+  #about p:last-child::after {
+    top: 95rem;
+  }
+  #about .container:first-of-type p:nth-child(5) {
+    margin-top: -45px;
+    max-width: 45%;
+    justify-self: right;
+  }
+  #about .container:last-of-type p:nth-of-type(3) {
+    margin-top: -45px;
+  }
+  #about .container:last-of-type p:last-of-type {
+    margin-top: 45px;
+  }
+  #about ul {
+    padding: 4rem 4rem;
+    justify-self: center;
+    font-size: 250%;
+  }
+  #about .container:last-of-type {
+    margin-bottom: -525px;
+  }
+}
+
+#guidelines .container {
+  margin-top: 6rem;
+}
+#guidelines a {
+  justify-self: center;
+  font-family: "Quicksand", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size: 25px;
+  border-bottom: solid 4px #89192F;
+  color: #110F1A;
+  text-decoration: none;
+  margin: auto -1px;
+  text-align: center;
+}
+#guidelines h3 {
+  margin-top: 4rem;
+}
+#guidelines .link-guidelines {
+  border: none;
+  color: #ffffff;
+  padding: 6rem 5rem 4rem 5rem;
+  background-image: url(../../images/ink-sketches-07.svg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: block;
+  margin-top: 2rem;
+  width: 25rem;
+  height: 6rem;
+  z-index: -1;
+  transition: background-size 0.3s ease-in-out;
+}
+@media (max-width: 550px) {
+  #guidelines * {
+    display: block;
+    text-align: center;
+    font-size: normal;
+  }
+  #guidelines * * {
+    max-width: 100%;
+  }
+  #guidelines * h1 {
+    font-size: 9rem;
+    margin-top: 6rem;
+    margin-bottom: 18rem;
+  }
+  #guidelines * h2 {
+    font-size: 3rem;
+  }
+  #guidelines * p, #guidelines * a {
+    font-size: 1.8rem;
+  }
+  #guidelines *::after {
+    content: "";
+    background-image: url("../images/ink-sketches-02.svg");
+    background-size: cover;
+    z-index: -1;
+  }
+}
+@media (max-width: 550px) {
+  #guidelines {
+    margin-top: 670px;
+  }
+  #guidelines * {
+    font-size: 125%;
+  }
+  #guidelines a {
+    margin: auto -1px;
+  }
+  #guidelines a:after {
+    max-width: 100%;
+  }
+}
+
+#contribute {
+  position: relative;
+}
+#contribute a {
+  text-decoration: none;
+  color: #110F1A;
+  border-bottom: solid 4px #89192F;
+  margin: auto -1px;
+}
+#contribute > :first-child {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: auto auto auto;
+  gap: 0px 0px;
+}
+#contribute h2 {
+  grid-area: 1/2/2/3;
+}
+#contribute .container p:nth-child(2) {
+  grid-area: 2/2/3/3;
+}
+#contribute .container p:nth-child(3) {
+  grid-area: 3/2/4/3;
+}
+#contribute ol {
+  list-style: decimal;
+  list-style-type: decimal;
+}
+#contribute .container:nth-of-type(2) {
+  margin-top: 8rem;
+}
+@media (max-width: 1064px) {
+  #contribute .container:nth-of-type(2) {
+    margin-top: 4rem;
+  }
+}
+#contribute h2::before {
+  content: "";
+  position: absolute;
+  top: -3rem;
+  left: -7rem;
+  width: 30rem;
+  height: 30rem;
+  background-image: url("../images/ink-sketches-03.svg");
+  background-size: cover;
+  background-position: left;
+  z-index: -1;
+}
+#contribute footer {
+  margin-top: 6rem;
+  border: none;
+  color: #ffffff;
+  padding: 4rem;
+  background-image: url(../../images/ink-sketches-10.svg);
+  background-size: cover;
+  background-position: center;
+}
+#contribute footer .container {
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 0px 10px;
+  grid-template-areas: "h3 h3 h3" "a1 a2 a3";
+}
+#contribute footer h3 {
+  grid-area: h3;
+}
+#contribute footer .container a:nth-child(2) {
+  grid-area: a1;
+}
+#contribute footer .container a:nth-child(3) {
+  grid-area: a2;
+}
+#contribute footer .container a:nth-child(4) {
+  grid-area: a3;
+}
+#contribute footer .container a {
+  border: none;
+  background-color: #110F1A;
+  color: #ffffff;
+  padding: 3rem 1rem;
+  border-radius: 1rem;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+}
+@media (max-width: 550px) {
+  #contribute {
+    display: block;
+    text-align: center;
+    font-size: normal;
+  }
+  #contribute * {
+    max-width: 100%;
+  }
+  #contribute h1 {
+    font-size: 9rem;
+    margin-top: 6rem;
+    margin-bottom: 18rem;
+  }
+  #contribute h2 {
+    font-size: 3rem;
+  }
+  #contribute p, #contribute a {
+    font-size: 1.8rem;
+  }
+  #contribute::after {
+    content: "";
+    background-image: url("../images/ink-sketches-02.svg");
+    background-size: cover;
+    z-index: -1;
+  }
+}
+@media (max-width: 800px) {
+  #contribute h2::before {
+    left: -9rem;
+  }
+  #contribute > :first-child {
+    grid-template-columns: 17fr 23fr;
+  }
+}
+@media (max-width: 550px) {
+  #contribute > :first-child {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 0px 0px;
+  }
+  #contribute h2 {
+    grid-area: 1/1/1/1;
+  }
+  #contribute .container p:nth-child(2) {
+    grid-area: 2/1/3/1;
+  }
+  #contribute .container p:nth-child(3) {
+    grid-area: 3/1/4/1;
+  }
+  #contribute h2:before {
+    max-width: 100%;
+    margin-left: -15px;
+  }
+  #contribute a {
+    font-size: 100%;
+  }
+  #contribute footer {
+    padding: 1rem;
+  }
+  #contribute footer .container a {
+    padding: 2rem 0.2rem;
+    border-radius: 1rem;
+    font-size: 1.4em;
+    margin: 10px;
+  }
+}
+@media (max-width: 550px) and (max-width: 375px) {
+  #contribute footer .container a {
+    font-size: 1.3em;
+    margin: 8px;
+  }
+}
+
+#styles {
+  margin-top: 6rem;
+}
+#styles h2 {
+  text-align: center;
+}
+#styles ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px 20px;
+  list-style: none;
+  padding-left: 0px;
+}
+#styles li {
+  text-decoration: none;
+  text-align: center;
+  color: #ffffff;
+  background-color: #89192F;
+  border-radius: 1rem;
+  padding: 4rem 1rem;
+}
+#styles li a {
+  color: #ffffff;
+  margin: auto -1px;
+}
+#styles .container > a {
+  text-align: center;
+  border: none;
+  color: #ffffff;
+  padding: 5rem 3rem 1rem 3rem;
+  margin: 0 auto;
+  background-image: url(../../images/ink-sketches-08.svg);
+  display: block;
+  background-size: cover;
+  background-position: center;
+  width: 25rem;
+  height: 6rem;
+  z-index: -1;
+}
+@media (max-width: 550px) {
+  #styles ul {
+    display: block;
+    padding-left: 0px;
+  }
+  #styles .container > a {
+    margin: 2px;
+    padding-bottom: 24px;
+    padding-left: 24px;
+  }
+}
+
+.profile {
+  position: relative;
+  margin-top: 6rem;
+}
+.profile ul {
+  list-style: none;
+  padding: 0;
+}
+.profile a {
+  text-decoration: none;
+  color: #110F1A;
+  border-bottom: solid 4px #89192F;
+  margin: auto -1px;
+}
+.profile .container > a {
+  display: block;
+  margin: 0 auto;
+  margin-top: 240px;
+  text-align: center;
+  border: none;
+  color: #ffffff;
+  padding: 5rem 2rem 1rem 2rem;
+  background-image: url(../../images/ink-sketches-08.svg);
+  display: block;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 25rem;
+  height: 6rem;
+  z-index: -1;
+  transition: background-size 0.3s ease-in-out;
+}
+@media (max-width: 1050px) {
+  .profile .container > a {
+    margin-top: 125px;
+  }
+}
+.profile::after {
+  content: "";
+  position: absolute;
+  top: -10rem;
+  right: 0rem;
+  width: 60rem;
+  height: 50rem;
+  background-image: url("../images/ink-sketches-05.svg");
+  background-size: cover;
+  background-position: right;
+  z-index: -1;
+}
+@media (max-width: 1310px) {
+  .profile::after {
+    width: 48rem;
+    height: 40rem;
+  }
+}
+@media (max-width: 1050px) {
+  .profile::after {
+    width: 36rem;
+    height: 30rem;
+    top: -8rem;
+  }
+}
+@media (max-width: 890px) {
+  .profile::after {
+    width: 30rem;
+    height: 25rem;
+    top: -5rem;
+    right: -4rem;
+  }
+}
+@media (max-width: 690px) {
+  .profile::after {
+    width: 21rem;
+    height: 18.5rem;
+    top: -4rem;
+    right: -5rem;
+  }
+}
+@media (max-width: 550px) {
+  .profile .container > a {
+    margin: 2px;
+    padding-bottom: 24px;
+    padding-left: 24px;
+  }
+}
+
+.page-footer {
+  padding: 4rem 1rem;
+  text-align: center;
+  height: 48rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-image: url(../../images/ink-sketches-06.svg);
+  background-size: cover;
+  background-position: top;
+  z-index: -1;
+}
+.page-footer p {
+  color: #ffffff;
+}
+.page-footer ul {
+  list-style: none;
+  margin: 6rem 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.page-footer ul li {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+}
+.page-footer ul li a {
+  color: #110F1A;
+  text-decoration: none;
+}
+.page-footer svg {
+  width: 2rem;
+  margin-top: 3rem;
+}
+.page-footer p a {
+  text-decoration: none;
+  color: #ffffff;
+  border-bottom: solid 4px #89192F;
+  margin: auto -1px;
+}
+@media (max-width: 550px) {
+  .page-footer {
+    display: block;
+    text-align: center;
+    font-size: normal;
+  }
+  .page-footer * {
+    max-width: 100%;
+  }
+  .page-footer h1 {
+    font-size: 9rem;
+    margin-top: 6rem;
+    margin-bottom: 18rem;
+  }
+  .page-footer h2 {
+    font-size: 3rem;
+  }
+  .page-footer p, .page-footer a {
+    font-size: 1.8rem;
+  }
+  .page-footer::after {
+    content: "";
+    background-image: url("../images/ink-sketches-02.svg");
+    background-size: cover;
+    z-index: -1;
+  }
+}
+@media (max-width: 550px) {
+  .page-footer {
+    margin-top: 2rem;
+    height: 76rem;
+  }
+  .page-footer ul {
+    display: block;
+    padding-left: 0px;
+  }
+  .page-footer li {
+    height: 7rem;
+    line-height: 7rem;
+    text-align: center;
+  }
+}
